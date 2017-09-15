@@ -1,0 +1,14 @@
+web:
+    build: ./build
+    command: sails lift
+    environment:
+        - VIRTUAL_HOST=dev.upintersoc.local
+    volumes:
+        - ./web:/src
+    ports:
+        - "1337:1337"
+
+mysql:
+    image: mysql:5.7
+    volumes:
+        - ./mysql/data:/var/lib/mysql
