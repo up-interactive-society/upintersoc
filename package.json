@@ -30,7 +30,8 @@
   },
   "main": "app.js",
   "engines": {
-    "node": "8.x.x"
+    "node": "8.4.0",
+    "npm": "5.3.0"
   },
   "repository": {
     "type": "git",
