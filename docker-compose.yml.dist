@@ -4,7 +4,7 @@ web:
     environment:
         - VIRTUAL_HOST=dev.upintersoc.local
     volumes:
-        - ./web:/src
+        - ./web/upintersoc:/src
     ports:
         - "1337:1337"
 
