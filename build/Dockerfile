@@ -8,6 +8,10 @@ RUN npm install -g \
 RUN apt-get update
 RUN apt-get install -y nano
 
-WORKDIR /src
+WORKDIR /src/upintersoc
+
+RUN cd /src/upintersoc
+RUN npm install
+RUN npm install -g forever
 
 EXPOSE 1337
