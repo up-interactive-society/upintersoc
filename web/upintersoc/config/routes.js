@@ -22,31 +22,19 @@
 
 module.exports.routes = {
 
-  /***************************************************************************
-  *                                                                          *
-  * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
-  * etc. depending on your default view engine) your home page.              *
-  *                                                                          *
-  * (Alternatively, remove this and add an `index.html` file in your         *
-  * `assets` directory)                                                      *
-  *                                                                          *
-  ***************************************************************************/
+  /*************************************************************
+  * Server Rendered HTML Page Endpoints                        *
+  *************************************************************/
+  'GET /': 'PageController.home',
+  'GET /login': 'PageController.login',
+  'GET /signup': 'PageController.signup',
+  
+  /*************************************************************
+  * JSON API ENDPOINTS                                         *
+  *************************************************************/
+  'PUT /login': 'UserController.login',
+  'POST /logout': 'UserController.logout',
+  'GET /logout': 'PageController.logout',
 
-  '/': {
-    view: 'homepage'
-  },
-
-  'get /login': { view: 'login' },
-  'post /login': 'AuthController.processLogin',
-
-  /***************************************************************************
-  *                                                                          *
-  * Custom routes here...                                                    *
-  *                                                                          *
-  * If a request to a URL doesn't match any of the custom routes above, it   *
-  * is matched against Sails route blueprints. See `config/blueprints.js`    *
-  * for configuration options and examples.                                  *
-  *                                                                          *
-  ***************************************************************************/
-
+  'POST /user/signup': 'UserController.signup',
 };
