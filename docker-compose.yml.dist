@@ -1,6 +1,6 @@
 web:
     build: ./build
-    command: sails lift
+    command: node index.js
     environment:
         - VIRTUAL_HOST=dev.upintersoc.local
     volumes:

@@ -1,12 +1,11 @@
 FROM node
 
-RUN npm install -g sails
-RUN npm install -g forever
-
 WORKDIR /src/upintersoc
 
-RUN cd /src/upintersoc
+RUN cd /src/upintersoc/frontend
 RUN npm install
-RUN npm install --save sails-mysql
+RUN npm build
+RUN cd /src/upintersoc/backend
+RUN npm install
 
 EXPOSE 1337

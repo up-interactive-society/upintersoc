@@ -1,0 +1,27 @@
+{
+  "name": "hapi-api",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "UP Intersoc Dev News",
+  "main": "server.js",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/up-interactive-society/upintersoc.git"
+  },
+  "keywords": [
+    "hapi"
+  ],
+  "dependencies": {
+    "glue": "^4.1.0",
+    "hapi": "^16.6.2",
+    "hapi-auth-jwt2": "^7.3.0",
+    "inert": "^4.2.1"
+  },
+  "devDependencies": {
+    "blipp": "^2.3.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}
